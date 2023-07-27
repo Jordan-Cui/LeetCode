@@ -1,0 +1,8 @@
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        shufflednums = []
+        half = int(len(nums) / 2)
+        for i in range(half):
+            shufflednums.append(nums[i])
+            shufflednums.append(nums[half + i])
+        return(shufflednums)
