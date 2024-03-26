@@ -5,3 +5,4 @@ class Solution:
             if nums[i] in a:
                 return [i, a[nums[i]]]
             a[target - nums[i]] = i
+            
