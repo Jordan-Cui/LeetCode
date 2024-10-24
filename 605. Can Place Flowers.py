@@ -10,3 +10,16 @@ class Solution:
             else:
                 prev = flowerbed[i]
         return(count >= n)
+
+#Alternate Solution using slicing:
+#class Solution:
+#    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+#        count = 1
+#        i = 0
+#        while i < len(flowerbed):
+#            if flowerbed[i] != 1 and flowerbed[i-1:i] != [1] and flowerbed[i+1:i+2] != [1]:
+#                count += 1
+#                i += 2
+#            else:
+#                i += 1
+#        return count > n
